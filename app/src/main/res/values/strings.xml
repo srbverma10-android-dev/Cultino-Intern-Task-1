@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Cultino</string>
+    <string name="content_description">Image Content Description</string>
+    <string name="enter_name">Enter Name…</string>
+    <string name="enter_email">Enter Email…</string>
+    <string name="submit">Submit</string>
+    <string name="go_to_next_activity">Next Activity</string>
+    <string name="fetch">Fetch</string>
+
+
+
+    <string name="preference_file_key">LoginActivitySharedPref</string>
+</resources>

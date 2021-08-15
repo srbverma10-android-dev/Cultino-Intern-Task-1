@@ -21,7 +21,7 @@ import javax.inject.Inject
 class LoginViewModel @Inject constructor(private val cacheHelperClass: CacheHelperClass) : ViewModel() {
     private var imageBitmap : Bitmap? = null
     @RequiresApi(Build.VERSION_CODES.O)
-    fun setOnSubmitButtonClick(name : String, email : String, context: Context){
+    fun setOnSubmitButtonClick(name : String, email : String, context: Context, nameText : TextView, emailText : TextView){
         if (Patterns.EMAIL_ADDRESS.matcher(email).matches() && imageBitmap != null) {
             val sharedPreferences: SharedPreferences =
                 context.getSharedPreferences("MySharedPref", MODE_PRIVATE)
@@ -33,6 +33,8 @@ class LoginViewModel @Inject constructor(private val cacheHelperClass: CacheHelp
             myEdit.putString("ProfileImage", currentDateTime.toString())
             if(myEdit.commit()){
                 Toast.makeText(context, "Saved", Toast.LENGTH_SHORT).show()
+                nameText.text = name
+                emailText.text = email
             } else {
                 Toast.makeText(context, "Not Saved", Toast.LENGTH_SHORT).show()
             }

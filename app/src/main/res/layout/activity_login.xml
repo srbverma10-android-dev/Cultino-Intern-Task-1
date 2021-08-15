@@ -104,7 +104,7 @@
 
             android:padding="@dimen/eight_dp"
 
-            android:onClick="@{()->viewModel.setOnSubmitButtonClick(nameEdit.getText().toString().trim(), emailEdit.getText().toString().trim(), context)}"
+            android:onClick="@{()->viewModel.setOnSubmitButtonClick(nameEdit.getText().toString().trim(), emailEdit.getText().toString().trim(), context, nameText, emailText)}"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/goButton"
